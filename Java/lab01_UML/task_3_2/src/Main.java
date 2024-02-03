@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello!");
+        Creator creator = new Creator();
+        Product product = creator.createProduct();
+        product.doSomething();
     }
 }
