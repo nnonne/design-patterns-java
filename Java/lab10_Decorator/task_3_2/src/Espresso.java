@@ -1,7 +1,7 @@
 public class Espresso extends Beverage {
     @Override
     public String description() {
-        return "Espresso";
+        return "coffee.Espresso";
     }
 
     @Override
