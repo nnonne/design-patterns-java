@@ -1,5 +1,7 @@
-public class Trolleybus {
-    protected Trolleybus(int cost, int usageCost) {
+package tram;
+
+public class Tram {
+    protected Tram(int cost, int usageCost) {
         this.cost = cost;
         this.usageCost = usageCost;
     }
@@ -12,8 +14,8 @@ public class Trolleybus {
         return usageCost;
     }
 
-    public void goByContactNetwork() {
-        System.out.println("Trolleybus runs");
+    public void goByRails() {
+        System.out.println("tram.Tram runs!");
     }
 
     private final int cost;       // Вартість одиниці транспорту

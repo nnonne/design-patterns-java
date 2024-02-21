@@ -1,5 +1,7 @@
-public class Tram {
-    protected Tram(int cost, int usageCost) {
+package bus;
+
+public class Bus {
+    protected Bus(int cost, int usageCost) {
         this.cost = cost;
         this.usageCost = usageCost;
     }
@@ -12,8 +14,8 @@ public class Tram {
         return usageCost;
     }
 
-    public void goByRails() {
-        System.out.println("Tram runs!");
+    public void goByWay() {
+        System.out.println("bus.Bus runs!");
     }
 
     private final int cost;       // Вартість одиниці транспорту
