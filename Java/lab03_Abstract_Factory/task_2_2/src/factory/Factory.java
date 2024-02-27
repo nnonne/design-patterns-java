@@ -1,4 +1,4 @@
-package factory;
+package machinefactory;
 
 import bus.Bus;
 import tram.Tram;

@@ -1,5 +1,5 @@
 import coffee.Coffee;
-import factory.CoffeeFactory;
+import machinefactory.CoffeeFactory;
 
 public class CoffeeShop {
 

@@ -1,4 +1,4 @@
-package factory;
+package machinefactory;
 
 import coffee.Coffee;
 import coffee.Latte;
