@@ -1,6 +1,6 @@
-import factory.BiQuadraticEquationFactory;
-import factory.EquationFactory;
-import factory.QuadraticEquationFactory;
+import machinefactory.BiQuadraticEquationFactory;
+import machinefactory.EquationFactory;
+import machinefactory.QuadraticEquationFactory;
 
 import java.util.ArrayList;
 

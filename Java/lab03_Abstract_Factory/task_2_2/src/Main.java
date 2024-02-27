@@ -1,8 +1,8 @@
 import bus.Bus;
-import factory.Factory;
-import factory.HyundaiFactory;
-import factory.SkodaFactory;
-import factory.VolvoFactory;
+import machinefactory.Factory;
+import machinefactory.HyundaiFactory;
+import machinefactory.SkodaFactory;
+import machinefactory.VolvoFactory;
 import tram.Tram;
 import trolleybus.Trolleybus;
 

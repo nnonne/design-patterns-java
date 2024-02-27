@@ -1,4 +1,4 @@
-package factory;
+package machinefactory;
 
 import equation.BiQuadraticEquation;
 import equation.Equation;

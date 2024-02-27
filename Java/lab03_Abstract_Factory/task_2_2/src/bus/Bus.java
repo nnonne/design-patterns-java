@@ -5,7 +5,6 @@ public class Bus {
         this.cost = cost;
         this.usageCost = usageCost;
     }
-
     public int getCost() {
         return cost;
     }
@@ -15,7 +14,7 @@ public class Bus {
     }
 
     public void goByWay() {
-        System.out.println("bus.Bus runs!");
+        System.out.println("Bus runs!");
     }
 
     private final int cost;       // Вартість одиниці транспорту

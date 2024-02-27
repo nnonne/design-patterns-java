@@ -15,7 +15,7 @@ public class Tram {
     }
 
     public void goByRails() {
-        System.out.println("tram.Tram runs!");
+        System.out.println("Tram runs!");
     }
 
     private final int cost;       // Вартість одиниці транспорту

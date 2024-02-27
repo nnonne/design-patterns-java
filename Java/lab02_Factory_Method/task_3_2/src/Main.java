@@ -1,4 +1,4 @@
-import factory.EquationFactory;
+import machinefactory.EquationFactory;
 
 import java.io.*;
 import java.util.ArrayList;

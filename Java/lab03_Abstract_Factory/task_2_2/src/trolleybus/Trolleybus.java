@@ -15,7 +15,7 @@ public class Trolleybus {
     }
 
     public void goByContactNetwork() {
-        System.out.println("trolleybus.Trolleybus runs");
+        System.out.println("Trolleybus runs");
     }
 
     private final int cost;       // Вартість одиниці транспорту
