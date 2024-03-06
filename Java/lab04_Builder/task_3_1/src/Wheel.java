@@ -1,3 +1,4 @@
+
 public class Wheel {
     public enum Material {  // Матеріал диску
         Steel,  //  Стальний диск
@@ -20,5 +21,24 @@ public class Wheel {
                 "material=" + material +
                 ", diameter=" + diameter +
                 '}';
+    }
+
+    public static class WheelBuilder {
+
+        private Material material;
+        private int diameter;
+
+        WheelBuilder setMaterial(Material material) {
+            this.material = material;
+            return this;
+        }
+        WheelBuilder setDiameter(int diameter) {
+            this.diameter = diameter;
+            return this;
+        }
+
+        Wheel build() {
+            return new Wheel(material, diameter);
+        }
     }
 }

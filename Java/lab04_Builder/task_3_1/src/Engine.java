@@ -1,3 +1,4 @@
+
 public class Engine {
     public enum Fuel {  // Тип пального
         Petrol,    // Бензин
@@ -26,4 +27,34 @@ public class Engine {
                 ", volume=" + volume +
                 '}';
     }
+
+    public static class EngineBuilder {
+
+        int power;
+        int torque;
+        Fuel fuel;
+        float volume;
+
+        EngineBuilder setPower(int power) {
+            this.power = power;
+            return this;
+        }
+        EngineBuilder setTorque(int torque) {
+            this.torque = torque;
+            return this;
+        }
+        EngineBuilder setFuel(Fuel fuel) {
+            this.fuel = fuel;
+            return this;
+        }
+        EngineBuilder setVolume(float volume) {
+            this.volume = volume;
+            return this;
+        }
+
+        Engine build() {
+            return new Engine(power, torque, fuel, volume);
+        }
+    }
+
 }
