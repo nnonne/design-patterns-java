@@ -1,5 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder
+                .setString("start ")
+                .addSymbols("end")
+                .insertSymbols("middle ", 6);
+        String string = stringBuilder.build();
+
+        System.out.println(string);
+
     }
 }
