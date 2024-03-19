@@ -1,4 +1,5 @@
-public class Wheel {
+
+public class Wheel implements CloneablePart{
     public enum Material {  // Матеріал диску
         Steel,  //  Стальний диск
         Alloy,  //  Легкосплавний
@@ -14,11 +15,40 @@ public class Wheel {
         this.diameter = diameter;
     }
 
+    public Wheel(Wheel other){
+        this.material = other.material;
+        this.diameter = other.diameter;
+    }
+
     @Override
     public String toString() {
         return "Wheel{" +
                 "material=" + material +
                 ", diameter=" + diameter +
                 '}';
+    }
+
+    @Override
+    public Wheel clone(){
+        return new Wheel(this);
+    }
+
+    public static class WheelBuilder {
+
+        private Material material;
+        private int diameter;
+
+        WheelBuilder setMaterial(Material material) {
+            this.material = material;
+            return this;
+        }
+        WheelBuilder setDiameter(int diameter) {
+            this.diameter = diameter;
+            return this;
+        }
+
+        Wheel build() {
+            return new Wheel(material, diameter);
+        }
     }
 }
