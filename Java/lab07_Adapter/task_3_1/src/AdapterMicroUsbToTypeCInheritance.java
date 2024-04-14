@@ -1,5 +1,4 @@
 import com.mobile.Legacy.Charger;
-import com.mobile.Legacy.MicroUsbCharger;
 
 public class AdapterMicroUsbToTypeCInheritance extends Charger implements TypeCCharger {
 
