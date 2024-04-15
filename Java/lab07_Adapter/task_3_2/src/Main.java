@@ -10,6 +10,11 @@ public class Main {
         VehicleCalculator calculator = new CarCalculator();
         calculator.setVehicle(vehicle);
         System.out.println(calculator.calculatePrice());
+
+        CarCalculatorAdapter carCalculatorAdapter = new CarCalculatorAdapter(calculator);
+        carCalculatorAdapter.setVehicle(vehicle);
+        System.out.println(carCalculatorAdapter.calculatePrice());
+
     }
 
 
