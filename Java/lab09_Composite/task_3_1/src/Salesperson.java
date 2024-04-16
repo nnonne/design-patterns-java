@@ -1,18 +1,9 @@
-public class Salesperson {
-
-  private final String name;
-  private final int salary;
+public class Salesperson extends Worker {
 
   private final Manager manager;
-
-  public Salesperson(String name, int salary, Manager manager) {
-    this.name = name;
-    this.salary = salary;
+  public Salesperson(String name, Department department, Manager manager) {
+    super(name, department);
     this.manager = manager;
-  }
-
-  public void payExpenses() {
-    System.out.println(name + " has been paid $" + salary);
   }
 
 }

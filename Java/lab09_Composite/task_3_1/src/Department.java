@@ -1,0 +1,9 @@
+public enum Department {
+    DAIRY,
+    MEAT,
+    CONFECTIONERY,
+    MANAGEMENT,
+    DAIRY_MANAGEMENT,
+    MEAT_MANAGEMENT,
+    CONFECTIONERY_MANAGEMENT
+}
