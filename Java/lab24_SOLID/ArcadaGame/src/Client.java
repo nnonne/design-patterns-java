@@ -5,7 +5,7 @@ public class Client {
 
 
     private static GameScene generateScene() {
-        System.out.println("Select level (Easy/Medium/Nightmare): ");
+        System.out.println("Select level (Easy/size.Medium/Nightmare): ");
         String level = scanner.nextLine();
 
         return new GameScene(level);
