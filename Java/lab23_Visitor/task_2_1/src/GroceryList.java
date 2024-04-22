@@ -7,6 +7,10 @@ public class GroceryList implements Groceries {
     public GroceryList() {
     }
 
+    public ArrayList<Groceries> getGroceries() {
+        return groceries;
+    }
+
     void add(Groceries grocery){
         groceries.add(grocery);
     }
@@ -18,6 +22,12 @@ public class GroceryList implements Groceries {
             sum += grocery.getPrice();
         }
         return sum;
+    }
+
+    public void accept(PriceVisitor visitor){
+        for (Groceries grocery: groceries){
+            grocery.accept(visitor);
+        }
     }
 
 }

@@ -11,4 +11,7 @@ public class Bread implements Groceries {
         return price;
     }
 
+    public  void accept(PriceVisitor visitor){
+        visitor.visit(this);
+    }
 }
