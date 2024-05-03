@@ -23,7 +23,7 @@ public class Request {
 
     @Override
     public String toString() {
-        return "Request{" +
+        return "handler.Request{" +
                 "type=" + type +
                 ", id=" + id +
                 '}';
