@@ -3,6 +3,6 @@ public interface Device {
     void off();
     void volumeUp();
     void volumeDown();
-    void nextChanel();
-    void prevChanel();
+    void nextChannel();
+    void prevChannel();
 }

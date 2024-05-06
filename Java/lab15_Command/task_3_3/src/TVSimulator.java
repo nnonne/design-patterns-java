@@ -3,23 +3,62 @@ public class TVSimulator {
 
         Device tv = new Television();
 
-        RemoteController controller = new RemoteController();
+        RemoteController tvController = new RemoteController();
 
-        controller.deviceOn();
+        tvController.setCommandOn(new CommandOn(tv));
+        tvController.setCommandOff(new CommandOff(tv));
+        tvController.setCommandVolumeUp(new CommandVolumeUp(tv));
+        tvController.setCommandVolumeDown(new CommandVolumeDown(tv));
+        tvController.setCommandNextChannel(new CommandNextChannel(tv));
+        tvController.setCommandPrevChannel(new CommandPrevChannel(tv));
+
+        tvController.deviceOn();
 
         for (int i = 0; i < 30; i++) {
-            controller.deviceNextChanel();
+            tvController.deviceNextChanel();
         }
-        controller.deviceVolumeUp();
+        tvController.deviceVolumeUp();
+        tvController.deviceVolumeUp();
+        tvController.deviceVolumeUp();
 
-        controller.deviceVolumeUp();
-        controller.deviceVolumeUp();
+        tvController.devicePrevChanel();
 
-        controller.devicePrevChanel();
+        tvController.deviceVolumeDown();
 
-        controller.deviceVolumeDown();
+        tvController.deviceOff();
 
-        controller.deviceOff();
+
+        Device radio = new Radio();
+        RemoteController radioController = new RemoteController();
+        radioController.setCommandOn(new CommandOn(radio));
+        radioController.setCommandOff(new CommandOff(radio));
+        radioController.setCommandVolumeUp(new CommandVolumeUp(radio));
+        radioController.setCommandVolumeDown(new CommandVolumeDown(radio));
+        radioController.setCommandNextChannel(new CommandNextChannel(radio));
+        radioController.setCommandPrevChannel(new CommandPrevChannel(radio));
+
+
+        radioController.deviceOn();
+
+        for (int i = 0; i < 30; i++) {
+            radioController.deviceNextChanel();
+        }
+        radioController.deviceVolumeUp();
+        radioController.deviceVolumeUp();
+        radioController.deviceVolumeUp();
+
+        radioController.devicePrevChanel();
+
+        radioController.deviceVolumeDown();
+
+        radioController.deviceOff();
+
+        ControllerUniversal controllerUniversal = new ControllerUniversal();
+        controllerUniversal.addController(tvController);
+        controllerUniversal.addController(radioController);
+
+        controllerUniversal.turnAllOn();
+        controllerUniversal.turnAllOff();
 
     }
 }
