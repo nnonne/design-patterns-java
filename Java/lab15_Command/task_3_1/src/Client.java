@@ -10,7 +10,15 @@ public class Client {
         Controller controllerHallLamp = new Controller();
         Controller controllerBedroomLamp = new Controller();
         Controller controllerBathroomLamp = new Controller();
-        Controller controllerUniversal = new Controller();
+
+        controllerKitchenLamp.setOn(new CommandTurnOn(kitchenLamp));
+        controllerKitchenLamp.setOff(new CommandTurnOff(kitchenLamp));
+        controllerHallLamp.setOn(new CommandTurnOn(hallLamp));
+        controllerHallLamp.setOff(new CommandTurnOff(hallLamp));
+        controllerBedroomLamp.setOn(new CommandTurnOn(bedroomLamp));
+        controllerBedroomLamp.setOff(new CommandTurnOff(bedroomLamp));
+        controllerBathroomLamp.setOn(new CommandTurnOn(bathroomLamp));
+        controllerBathroomLamp.setOff(new CommandTurnOff(bathroomLamp));
 
         // Simulation
         controllerKitchenLamp.on();
@@ -24,7 +32,16 @@ public class Client {
         controllerBedroomLamp.on();
         controllerBathroomLamp.on();
 
-        controllerUniversal.off();
+
+        ControllerUniversal controllerUniversal = new ControllerUniversal();
+        controllerUniversal.addController(controllerKitchenLamp);
+        controllerUniversal.addController(controllerHallLamp);
+        controllerUniversal.addController(controllerBedroomLamp);
+        controllerUniversal.addController(controllerBathroomLamp);
+
+        System.out.println("\n");
+        controllerUniversal.turnAllOff();
+        controllerUniversal.turnAllOn();
 
     }
 }

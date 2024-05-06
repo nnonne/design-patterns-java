@@ -27,4 +27,5 @@ public class Lamp {
         System.out.println(name + ": Light is off");
         isLightOn = false;
     }
+
 }
