@@ -11,11 +11,9 @@ public class Main {
     staffList.addEmployee(sarah);
     staffList.addEmployee(anna);
 
-          // TODO: Implement pattern to run commented code
-//    for (Employee employee : StaffList){
-//      System.out.println(employee);
-//    }
-
+    Iterator iterator = staffList.createIterator();
+    while (iterator.hasMore()){
+      System.out.println(iterator.getNext());
+    }
   }
-
 }
