@@ -14,5 +14,7 @@ public class Client {
         textEditor.selectSaveMenuItem();
         textEditor.pressSaveShortcut();
         textEditor.pressPrintShortcut();
+
+
     }
 }

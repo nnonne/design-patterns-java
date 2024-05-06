@@ -26,6 +26,20 @@ public class TextEditor {
 
     public void newDocument(String name) {
         document = new Document(name);
+
+        Command commandSave = new CommandSave(document);
+        Command commandPrint = new CommandPrint(document);
+        Command commandShowInfo = new CommandShowInfo(document);
+
+        saveButton.setCommand(commandSave);
+        printButton.setCommand(commandPrint);
+
+        saveMenuItem.setCommand(commandSave);
+        printMenuItem.setCommand(commandPrint);
+        showInfoMenuItem.setCommand(commandShowInfo);
+
+        saveShortcut.setCommand(commandSave);
+        printShortcut.setCommand(commandPrint);
     }
 
     public void clickSaveButton() {

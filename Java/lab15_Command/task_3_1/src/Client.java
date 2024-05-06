@@ -1,6 +1,5 @@
 public class Client {
     public static void main(String[] args) {
-
         Lamp kitchenLamp = new Lamp("Kitchen");
         Lamp hallLamp = new Lamp("Hall");
         Lamp bedroomLamp = new Lamp("Bedroom");
