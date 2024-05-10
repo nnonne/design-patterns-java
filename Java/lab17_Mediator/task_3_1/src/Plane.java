@@ -28,6 +28,8 @@ public class Plane {
    */
   private PlanesOnGround planesOnGround;
 
+  private Mediator mediator;
+
 
   public Plane(int id) {
     this.id = id;
@@ -73,5 +75,18 @@ public class Plane {
    */
   public int getId() {
     return id;
+  }
+
+
+  public void setMediator(Mediator mediator) {
+    this.mediator = mediator;
+  }
+  public void sendMessage(String message) {
+    if (mediator != null){
+      mediator.broadcast(this, message);
+    }
+  }
+  public void handleMessage(Plane from, String message) {
+    System.out.println("Plane " + this.getId() + " received message " + message + " from plane " + from.getId());
   }
 }
