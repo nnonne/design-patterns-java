@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Random random = new Random();
@@ -19,7 +20,35 @@ public class Main {
             }
         }
 
-        root.execute();
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
+        IteratorDepth iterator = new IteratorDepth(root);
+        System.out.println("Depth iteration");
+        while (iterator.hasMore()) {
+            Component component = iterator.getNext();
+            System.out.println(component);
+        }
+
+        System.out.println("Width iteration");
+        IteratorWidth iterator2 = new IteratorWidth(root);
+        while (iterator2.hasMore()) {
+            Component component = iterator2.getNext();
+            System.out.println(component);
+            if (component instanceof Item) {
+                Item item = (Item) component;
+                int value = item.getValue();
+                if (value < min) {
+                    min = value;
+                }
+                if (value > max) {
+                    max = value;
+                }
+            }
+        }
+
+        System.out.println("Maximum value = " + max);
+        System.out.println("Minimum value = " + min);
 
     }
 }

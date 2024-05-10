@@ -22,4 +22,8 @@ public class Item implements Component {
     public void execute() {
         System.out.println(this);
     }
+
+    public int getValue() {
+        return value;
+    }
 }

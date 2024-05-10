@@ -27,10 +27,15 @@ public class Box implements Component {
 
     @Override
     public void execute() {
-        System.out.println("Box: " + id);
-        for (Component child : children) {
-            child.execute();
-        }
+        System.out.println(this);
+    }
 
+    @Override
+    public String toString() {
+        String ans =  "Box: " + id + "\n";
+        for (Component child : children) {
+            ans += child.toString() + "\n";
+        }
+        return ans;
     }
 }
