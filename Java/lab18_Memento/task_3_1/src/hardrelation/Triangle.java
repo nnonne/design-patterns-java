@@ -1,4 +1,4 @@
-public class Triangle {
+public class Triangle implements Originator {
 
     private float a;
     private float b;
@@ -77,5 +77,21 @@ public class Triangle {
         return (float) Math.sqrt(s);
     }
 
+    public float getA() {
+        return a;
+    }
+
+    public float getB() {
+        return b;
+    }
+
+    public float getC() {
+        return c;
+    }
+
+    @Override
+    public Memento save(){
+        return new ConcreteMemento(a, b, c, this);
+    }
 
 }
